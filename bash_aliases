@@ -5,7 +5,7 @@ alias ls='ls -p'
 alias ql='qlmanage -p "$@" >& /dev/null'
 
 # cd to projects
-function workon { cd ~/Projects/$1; }
+function p { cd ~/Projects/$1; }
 
 # reload bash config
 alias reload='. ~/.bash_profile'

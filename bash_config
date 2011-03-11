@@ -18,6 +18,13 @@ function rvm_status {
 }
 
 
+# detect if a command exists
+function command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+
+
 # prompt: '[ruby@gemset][gitbranch *][user:path]$' w/colours
 # title: user@host:path
 export PS1='$(rvm_status)$(git_status)[\[\033[01;32m\]\u\[\033[0m\]:\[\033[01;34m\]\w\[\033[0m\]]\$ '

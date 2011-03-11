@@ -12,3 +12,8 @@ alias reload='. ~/.bash_profile'
 
 # open xcode project
 alias xcode="open *.xcodeproj"
+
+# github–git integration
+if command_exists hub ; then
+	alias git=hub
+fi

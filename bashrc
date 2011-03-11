@@ -1,5 +1,5 @@
-source ~/.bash_aliases
 source ~/.bash_config
+source ~/.bash_aliases
 
 # system paths & enviroment variables
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:/usr/local/mysql/bin:$PATH"

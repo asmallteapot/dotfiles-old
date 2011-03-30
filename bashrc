@@ -9,6 +9,10 @@ export EDITOR="mate -rw"
 export TERM="xterm"
 
 
+# MAGIC
+export CLARITY_SECURE_OFF="Lobsters"
+
+
 # use .localrc for machine-specific settings
 if [ -f ~/.localrc ]; then
   source ~/.localrc

@@ -19,7 +19,7 @@ function rvm_status {
 
 
 # load up virtualenv wrapper
-source /usr/local/bin/virtualenvwrapper.sh
+[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
 
 
 # detect if a command exists

@@ -18,11 +18,14 @@ function rvm_status {
 }
 
 
+# load up virtualenv wrapper
+[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
+
+
 # detect if a command exists
 function command_exists () {
     type "$1" &> /dev/null ;
 }
-
 
 
 # prompt: '[ruby@gemset][gitbranch *][user:path]$' w/colours

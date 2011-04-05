@@ -6,7 +6,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:/usr/local/mysql/b
 export PYTHONPATH=/usr/local/lib/python2.6/site-packages
 export NODE_PATH=/usr/local/lib/node
 export EDITOR="mate -rw"
-export TERM="xterm"
+export TERM="xterm-256color"
 
 
 # MAGIC

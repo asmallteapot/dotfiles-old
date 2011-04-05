@@ -6,3 +6,5 @@ set tabstop=4			" display tabs as four spaces wide
 set columns=82			" default windows have 82 columns
 set lines=63			" default windows have 63 lines
 
+" toggle the file tree
+map <F2> :NERDTreeToggle<CR>

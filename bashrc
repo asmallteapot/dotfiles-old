@@ -7,7 +7,7 @@ export PYTHONPATH=/usr/local/lib/python2.6/site-packages
 export WORKON_HOME=~/.py_env
 export NODE_PATH=/usr/local/lib/node
 export VIRTUALENV_USE_DISTRIBUTE="True"
-export EDITOR="mate -rw"
+export EDITOR="vim"
 export TERM="xterm-256color"
 
 

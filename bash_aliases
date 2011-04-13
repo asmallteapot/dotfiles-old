@@ -17,3 +17,7 @@ alias xcode="open *.xcodeproj"
 if command_exists hub ; then
 	alias git=hub
 fi
+
+# lazy!
+alias g=git
+

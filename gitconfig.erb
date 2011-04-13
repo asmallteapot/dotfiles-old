@@ -2,17 +2,23 @@
 	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
+	br = branch
 	ci = commit
 	co = checkout
-	df = !git diff | mate
+	df = diff
+    rb = rebase
+	rbi = rebase --interactive
+    rbc = rebase --continue
+    rbs = rebase --skip
 	st = status
+	staged = diff --cached
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -rw
+	editor = vim
 	autocrlf = input
 [apply]
 	whitespace = nowarn

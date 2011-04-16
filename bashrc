@@ -2,7 +2,7 @@ source ~/.bash_config
 source ~/.bash_aliases
 
 # system paths & enviroment variables
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.6/site-packages
 export WORKON_HOME=~/.py_env
 export NODE_PATH=/usr/local/lib/node

@@ -13,6 +13,9 @@ export TERM="xterm-256color"
 
 # autocompletion
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
 
 
 # MAGIC

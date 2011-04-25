@@ -15,6 +15,8 @@ export TERM="xterm-256color"
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
+	
+	complete -o default -o nospace -F _git g
 fi
 
 

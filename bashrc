@@ -11,6 +11,10 @@ export EDITOR="vim"
 export TERM="xterm-256color"
 
 
+# autocompletion
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+
+
 # MAGIC
 export CLARITY_SECURE_OFF="Lobsters"
 

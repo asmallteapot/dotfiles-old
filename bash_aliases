@@ -20,6 +20,7 @@ fi
 
 # lazy!
 alias g=git
+alias r=rails
 
 # update a rails project
 alias pur="g pull && bundle install && rake db:migrate && g co -- db/schema.rb && growlnotify -t 'Ruby on Rails' -m 'Application updated.' --image '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/html/images/rails.png'"

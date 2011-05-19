@@ -30,6 +30,12 @@ task :install do
       link_file(file)
     end
   end
+  
+  puts "updating vim bundles…"
+  update_bundles_path = File.join(ENV['HOME'], '.vim', 'update_bundles')
+  if File.exist? update_bundles_path
+    `chmod +x #{update_bundles_path} && #{update_bundles_path}`
+  end
 end
 
 def replace_file(file)

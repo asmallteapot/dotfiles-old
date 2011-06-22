@@ -2,7 +2,7 @@
 alias ls='ls -p'
 
 # cd to projects
-function p { cd ~/Projects/$1; }
+function p { cd ~/github/$1; }
 
 # quick look
 alias ql='qlmanage -p "$@" >& /dev/null'
@@ -27,4 +27,7 @@ alias pur="g pull && bundle install && rake db:migrate && g co -- db/schema.rb &
 
 # run a single rails test file
 # usage: qt functional/mobile_controller
-function qt() { rake test TEST=test/"$@"_test.rb ; growlnotify -t 'Ruby on Rails' -m 'Finished running tests.' --image '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/html/images/rails.png';}
+function qt() {
+	rake test TEST=test/"$@"_test.rb
+	growlnotify -t 'Ruby on Rails' -m 'Finished running tests.' --image '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/html/images/rails.png'
+}

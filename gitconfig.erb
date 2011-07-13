@@ -20,8 +20,8 @@
 	branch = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = vim
-	visual = vim
+	editor = mvim -f
+	staged = diff --cached
 	autocrlf = input
 [apply]
 	whitespace = fix

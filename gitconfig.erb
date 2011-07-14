@@ -2,9 +2,12 @@
 	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
+	a   = add
+	ap  = add --patch
 	br  = branch
 	ci  = commit
 	cia = commit --all
+	cim = commit --amend
 	co  = checkout
 	df  = diff
 	dfc = diff -cached

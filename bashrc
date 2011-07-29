@@ -9,7 +9,7 @@ export NODE_PATH=/usr/local/lib/node
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export EDITOR="mvim -f"
 export TERM="xterm-256color"
-
+export CC="gcc-4.2" # required by RVM
 
 # autocompletion
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash

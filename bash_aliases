@@ -2,7 +2,7 @@
 alias ls='ls -p'
 
 # cd to projects
-function p { cd ~/github/$1; }
+function p { cd ~/Projects/$1; }
 
 # quick look
 alias ql='qlmanage -p "$@" >& /dev/null'

@@ -10,6 +10,7 @@ export VIRTUALENV_USE_DISTRIBUTE="True"
 export EDITOR="mvim -f"
 export TERM="xterm-256color"
 export CC="gcc-4.2" # required by RVM
+export ARCHFLAGS="-arch i386 –arch x86_64" # compile x86-64 binaries
 
 # autocompletion
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash

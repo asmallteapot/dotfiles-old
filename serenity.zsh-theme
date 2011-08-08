@@ -13,7 +13,7 @@ function rvm_info () {
   #[ "$version" == "1.8.7" ] && set version=""
   #[ "$version" == "1.6.0" ] && version="jruby"
   local full="$version$gemset"
-  [ "$full" != "" ] && echo "with ruby $full"
+  [ "$full" != "" ] && echo "with %{$fg[red]%}ruby $full%{$reset_color%}"
 }
 
 function hg_prompt_info {

@@ -8,12 +8,13 @@ function virtualenv_info {
 
 function rvm_info () {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="@$gemset"
+  [ "$gemset" != "" ] && gemset=" and %{$fg[red]%}$gemset%{$reset_color%} gemset"
   local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
-  #[ "$version" == "1.8.7" ] && set version=""
+  #[ "$version" == "1.8.7" ] && version=""
   #[ "$version" == "1.6.0" ] && version="jruby"
+  [ "$version" != "" ] && version="using %{$fg[red]%}ruby $version%{$reset_color%}"
   local full="$version$gemset"
-  [ "$full" != "" ] && echo "with %{$fg[red]%}ruby $full%{$reset_color%}"
+  [ "$full" != "" ] && echo $full
 }
 
 function hg_prompt_info {

@@ -31,11 +31,8 @@ task :install do
     end
   end
   
-  #puts "updating vim bundles…"
-  #update_bundles_path = File.join(ENV['HOME'], '.vim', 'update_bundles')
-  #if File.exist? update_bundles_path
-  #  `chmod +x #{update_bundles_path} && #{update_bundles_path}`
-  #end
+  puts "linking zsh theme…"
+  `ln -s ~/Projects/dotfiles/serenity.zsh-theme ~/.oh-my-zsh/themes/serenity.zsh-theme`
 end
 
 def replace_file(file)

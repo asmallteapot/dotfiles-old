@@ -1,0 +1,9 @@
+# Install rubies when used if are not installed.
+export rvm_install_on_use_flag=1
+
+# Gemset Create on use Flag
+export rvm_gemset_create_on_use_flag=1
+
+# Automatically trust project .rvmrc files
+export rvm_trust_rvmrcs_flag=1
+

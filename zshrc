@@ -21,16 +21,19 @@ ZSH_THEME='serenity'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git rails ruby osx)
+
 
 # detect if a command exists
 command_exists () {
     type "$1" &> /dev/null ;
 }
 
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 source $ZSH/oh-my-zsh.sh
-source .zsh-alias
+source ~/.zsh-alias
+
 
 # system paths & enviroment variables
 export PATH="/usr/local/bin:/usr/local/sbin:/Users/bill/.rvm/bin/:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/Projects/scripts:$PATH"
@@ -43,4 +46,19 @@ export EDITOR="mvim -f"
 export TERM="xterm-256color"
 export CC="gcc-4.2" # required by RVM
 export ARCHFLAGS="-arch i386 –arch x86_64" # compile x86-64 binaries
+
+
+# “Restore” support for Terminal.app under Lion
+# Set Apple Terminal.app resume directory
+if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
+  function chpwd {
+    local SEARCH=' '
+    local REPLACE='%20'
+    local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+    printf '\e]7;%s\a' $PWD_URL
+  }
+
+  chpwd
+}
+__rvm_project_rvmrc
 

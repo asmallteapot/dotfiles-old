@@ -10,7 +10,11 @@ export VIRTUALENV_USE_DISTRIBUTE="True"
 export EDITOR="mvim -f"
 export TERM="xterm-256color"
 export CC="gcc-4.2" # required by RVM
-export ARCHFLAGS="-arch i386 –arch x86_64" # compile x86-64 binaries
+
+# compile x86-64 binaries
+# this breaks building native extensions under JRuby 1.6.3 on Mac OS 10.7
+# this is likely also true for the system MRI Ruby on 10.7, too.
+#export ARCHFLAGS="-arch i386 –arch x86_64"
 
 # autocompletion
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash

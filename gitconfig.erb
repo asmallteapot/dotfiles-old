@@ -10,17 +10,13 @@
 	cim = commit --amend
 	co  = checkout
 	df  = diff
-	dfc = diff -cached
+	dfc = diff --cached
 	fl  = flow
     rb  = rebase
 	rbi = rebase --interactive
     rbc = rebase --continue
     rbs = rebase --skip
 	st  = status
-[color]
-	diff = auto
-	status = auto
-	branch = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	editor = mvim -f
@@ -33,3 +29,21 @@
 [github]
 	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
 	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+

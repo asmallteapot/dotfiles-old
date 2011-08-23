@@ -4,6 +4,9 @@
 *.sw*
 *~
 
+# frakking Vim doctags
+doc/tags
+
 # frakking Command-T
 ruby/command-t/Makefile
 ruby/command-t/ext.bundle

@@ -32,6 +32,3 @@ function qt() {
 	growlnotify -t 'Ruby on Rails' -m 'Finished running tests.' --image '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/html/images/rails.png'
 }
 
-# Make clear do the right thing for multi–line prompts.
-alias clear="printf %b '\033c'"
-

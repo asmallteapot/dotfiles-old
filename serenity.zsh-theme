@@ -2,10 +2,6 @@ if [ "x$OH_MY_ZSH_HG" = "x" ]; then
     OH_MY_ZSH_HG="hg"
 fi
 
-function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo 'with python `basename $VIRTUAL_ENV`'
-}
-
 function rvm_info () {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset=" and %{$fg[red]%}$gemset%{$reset_color%} gemset"
@@ -35,9 +31,17 @@ function prompt_char {
     echo '$'
 }
 
+function battery_charge {
+    echo `battery.py` 2>/dev/null
+}
+
+function return_code {
+	echo "%(?,,%{${fg_bold[white]}%}[%?]%{$reset_color%} )"
+}
+
 PROMPT='
-%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}$(box_name)%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(hg_prompt_info)$(git_prompt_info) $(rvm_info)$(virtualenv_info)
-%(?,,%{${fg_bold[white]}%}[%?]%{$reset_color%} )$(prompt_char) '
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}$(box_name)%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(hg_prompt_info)$(git_prompt_info) $(rvm_info)
+$(prompt_char) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -45,5 +49,5 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-local return_status="%{$fg[red]%}%(?..✘)%{$reset_color%}"
-RPROMPT='${return_status}%{$reset_color%}'
+RPROMPT='$(return_code)$(battery_charge)'
+

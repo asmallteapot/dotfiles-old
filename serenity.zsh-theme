@@ -4,13 +4,13 @@ fi
 
 function rvm_info () {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="%{$fg[red]%}$gemset%{$reset_color%}"
+  [ "$gemset" != "" ] && gemset="%{$fg[red]%}@$gemset%{$reset_color%}"
   local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
   #[ "$version" == "1.8.7" ] && version=""
   #[ "$version" == "1.6.0" ] && version="jruby"
   [ "$version" != "" ] && version="%{$fg[red]%}$version%{$reset_color%}"
-  local full="[$version@$gemset]"
-  [ "$full" != "[@]" ] && echo $full
+  local full="[$version$gemset]"
+  [ "$full" != "[]" ] && echo $full
 }
 
 function hg_prompt_info {
@@ -48,5 +48,5 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-RPROMPT='$(hg_prompt_info)$(git_prompt_info) $(rvm_info) $(return_code)$(battery_charge)'
+RPROMPT='$(return_code) $(hg_prompt_info)$(git_prompt_info) $(rvm_info) $(battery_charge)'
 

@@ -45,7 +45,6 @@ export NODE_PATH=/usr/local/lib/node_modules
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export EDITOR="mvim -f"
 export TERM="xterm-256color"
-export CC="gcc-4.2" # required by RVM
 
 # compile x86-64 binaries
 # this breaks building native extensions under JRuby 1.6.3 on Mac OS 10.7

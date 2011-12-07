@@ -48,5 +48,5 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-RPROMPT='$(return_code) $(hg_prompt_info)$(git_prompt_info) $(rvm_info) $(battery_charge)'
+RPROMPT='$(return_code) $(git_prompt_info) $(rvm_info) $(battery_charge)'
 

@@ -19,6 +19,7 @@ if command_exists hub ; then
 fi
 
 # lazy!
+alias be='bundle exec'
 alias g=git
 alias r=rails
 alias vbm=VBoxManage

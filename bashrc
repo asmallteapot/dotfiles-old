@@ -2,19 +2,13 @@ source ~/.bash_config
 source ~/.bash_aliases
 
 # system paths & enviroment variables
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/Projects/scripts:$PATH"
-export PYTHONPATH=/usr/local/lib/python2.6/site-packages
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/bill/.rvm/bin/:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/Projects/scripts:$PATH"
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 export WORKON_HOME=~/.py_env
-export NODE_PATH=/usr/local/lib/node
+export NODE_PATH=/usr/local/lib/node_modules
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export EDITOR="mvim -f"
 export TERM="xterm-256color"
-export CC="gcc-4.2" # required by RVM
-
-# compile x86-64 binaries
-# this breaks building native extensions under JRuby 1.6.3 on Mac OS 10.7
-# this is likely also true for the system MRI Ruby on 10.7, too.
-#export ARCHFLAGS="-arch i386 –arch x86_64"
 
 # autocompletion
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
@@ -23,11 +17,6 @@ if [ -f /opt/local/etc/bash_completion ]; then
 	
 	complete -o default -o nospace -F _git g
 fi
-
-
-# MAGIC
-export CLARITY_SECURE_OFF="Lobsters"
-
 
 # use .localrc for machine-specific settings
 if [ -f ~/.localrc ]; then

@@ -47,5 +47,5 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
 }
 
 # Turn on auto–detection of .rvmrc files
-__rvm_project_rvmrc
+[ -x __rvm_project_rvmrc ] && __rvm_project_rvmrc
 

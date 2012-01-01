@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh-alias
 
 # system paths & enviroment variables
-export PATH="/usr/local/bin:/usr/local/sbin:/Users/bill/.rvm/bin/:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/Projects/scripts:$PATH"
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/Users/bill/.rvm/bin/:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/Projects/scripts:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 export WORKON_HOME=~/.py_env
 export NODE_PATH=/usr/local/lib/node

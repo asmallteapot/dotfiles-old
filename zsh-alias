@@ -1,26 +1,47 @@
-# show trailing slash for directories
+# Flush DNS cache (Mac OS X)
+alias flushdns="dscacheutil -flushcache"
+alias dnsflush="flushdns"
+
+# GitHub–Git integration
+[[ -x hub ]] && alias git=hub
+
+# Update git repo, and all submodules
+alias gitup="git submodule foreach 'git fetch origin --tags; git checkout master; git pull' && git pull && git submodule update --init --recursive"
+
+# Edit the hosts file
+alias hosts="edit /etc/hosts"
+
+# Get the IP address for a domain
+function ipfor(){
+	dig +short $1 | grep -E '^[0-9.]+$' | head -1
+}
+
+# Directory listing
+alias la="ls -lap"
+
+# Show trailing slash for directories
 alias ls='ls -p'
 
-# cd to projects
-function p { cd ~/Projects/$1; }
+# CD to projects
+function p {
+	cd ~/Projects/$1;
+}
 
-# quick look
+# Fix and shrink png files. Pass infile and outfile.
+alias pngfix="pngcrush -rem gAMA -rem cHRM -rem iCCP -rem sRGB $1 $2"
+
+# Quick look a file.
 alias ql='qlmanage -p "$@" >& /dev/null'
 
-# reload Zsh config
-alias reload='. ~/.zshrc'
+# Reload Zsh config.
+alias reload='source ~/.zshrc'
 
-# open xcode project
+# Open an Xcode project in the current directory
 alias xcode="open *.xcodeproj"
 
-# github–git integration
-if command_exists hub ; then
-	alias git=hub
-fi
-
-# lazy!
+# Very lazy shortcuts.
 alias be='bundle exec'
 alias g=git
+alias gu=gitup
 alias r=rails
 alias vbm=VBoxManage
-

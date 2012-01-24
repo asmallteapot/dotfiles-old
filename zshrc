@@ -12,12 +12,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails ruby osx)
 
-
-# detect if a command exists
-command_exists () {
-    type "$1" &> /dev/null ;
-}
-
+# Source other configuration files
 unsetopt auto_name_dirs
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 source $ZSH/oh-my-zsh.sh

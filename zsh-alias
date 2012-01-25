@@ -36,6 +36,9 @@ alias ql='qlmanage -p "$@" >& /dev/null'
 # Reload Zsh config.
 alias reload='source ~/.zshrc'
 
+# `repeatchar x 10` => `xxxxxxxxxx`
+repeatchar(){ printf "%${2}s" "" | tr " " $1; }
+
 # Open an Xcode project in the current directory
 alias xcode="open *.xcodeproj"
 

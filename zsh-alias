@@ -1,3 +1,8 @@
+# Send a growl notification after a long–running command finishes
+function alert() {
+    "$@" && growlnotify -a iTerm -m "Completed with exit code $?" "$@";
+}
+
 # Flush DNS cache (Mac OS X)
 alias flushdns="dscacheutil -flushcache"
 alias dnsflush="flushdns"

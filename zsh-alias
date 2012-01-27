@@ -3,6 +3,9 @@ function alert() {
     "$@" && growlnotify -a iTerm -m "Completed with exit code $?" "$@";
 }
 
+# Count lines
+alias count="sort | uniq -c | sort -n"
+
 # Flush DNS cache (Mac OS X)
 alias flushdns="dscacheutil -flushcache"
 alias dnsflush="flushdns"

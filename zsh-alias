@@ -56,3 +56,7 @@ alias g=git
 alias gu=gitup
 alias r=rails
 alias vbm=VBoxManage
+
+# Clear (auto)corrections cache
+alias ccc='hash -rf'
+

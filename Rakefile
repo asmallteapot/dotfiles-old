@@ -32,10 +32,10 @@ task :install do
   end
   
   # this is a bad idea…
-  #puts "linking hosts file…"
+  #puts "linking hosts file"
   #File.symlink File.join(ENV['HOME'], '.hosts'), '/etc/hosts'
   
-  puts "linking zsh theme…"
+  puts "linking zsh theme"
   File.symlink File.join(ENV['HOME'], '.serenity.zsh-theme'), 
     File.join(ENV['HOME'], '.oh-my-zsh', 'themes', 'serenity.zsh-theme')
 end

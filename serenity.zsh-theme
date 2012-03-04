@@ -32,7 +32,7 @@ function prompt_char {
 }
 
 function battery_charge {
-    echo `battery.py` 2>/dev/null
+    [ -x battery.py ] && echo `battery.py` 2>/dev/null
 }
 
 function return_code {

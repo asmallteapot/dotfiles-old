@@ -12,12 +12,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails ruby osx)
 
-
-# detect if a command exists
-command_exists () {
-    type "$1" &> /dev/null ;
-}
-
+# Source other configuration files
 unsetopt auto_name_dirs
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
@@ -25,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh-alias
 
 # system paths & enviroment variables
-export PATH="/usr/local/bin:/usr/local/sbin:/Users/bill/.rvm/bin/:/usr/local/share/python:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/Projects/scripts:$PATH"
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/Users/bill/.rvm/bin/:/usr/local/mysql/bin:/usr/local/share/npm/bin:~/Projects/scripts:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 export WORKON_HOME=~/.py_env
 export NODE_PATH=/usr/local/lib/node
@@ -47,6 +42,9 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
   chpwd
 }
 
+# Load virtualenvwrapper
+[[ -x "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
+
 # Turn on auto–detection of .rvmrc files
-__rvm_project_rvmrc
+[ -x __rvm_project_rvmrc ] && __rvm_project_rvmrc
 

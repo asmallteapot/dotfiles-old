@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+xcode = '/Applications/Xcode.app/Contents'
+xcode_bin = "#{xcode}/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin"
+pngcrush = "#{xcode_bin}/pngcrush"
+
+unless File.exists? pngcrush
+  abort "pngcrush not found"
+end
+
+unless File.executable? pngcrush
+  abort "pngcrush not executable"
+end
+
+unless File.directory? ARGV[0]
+  abort "must pass a directory"
+end
+path = File.join ARGV[0], '*.png'
+
+
+Dir[path].each do |file|
+  `#{pngcrush} -revert-iphone-optimizations #{file} #{file}.tmp`
+  File.delete file
+  File.rename "#{file}.tmp", file
+  puts "Converted #{file}"
+end

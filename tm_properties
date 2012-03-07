@@ -28,9 +28,11 @@ TM_GIT = "/usr/local/bin/hub"
 
 # Default editing configuration
 #
-softWrap         = false
-softTabs         = true
-tabSize          = 2
+softWrap		= true
+softTabs		= no
+tabSize			= 4
+wrapColumn		= 80
+showWrapColumn	= true
 
 # File type specific configuration
 #

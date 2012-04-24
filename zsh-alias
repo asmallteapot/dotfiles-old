@@ -60,3 +60,6 @@ alias vbm=VBoxManage
 # Clear (auto)corrections cache
 alias ccc='hash -rf'
 
+# Delete Xcode derived data
+# http://inessential.com/2012/04/23/ded
+rm -rf ~/Library/Developer/Xcode/DerivedData

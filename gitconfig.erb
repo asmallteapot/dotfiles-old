@@ -12,10 +12,16 @@
 	df  = diff
 	dfc = diff --cached
 	fl  = flow
+    history = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset' --all
+    h = history
     rb  = rebase
 	rbi = rebase --interactive
     rbc = rebase --continue
     rbs = rebase --skip
+    sm = submodule
+    sma = submodule add
+    smi = submodule init
+    smu = submodule update
 	st  = status
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore

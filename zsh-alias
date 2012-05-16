@@ -3,52 +3,68 @@ function alert() {
     "$@" && growlnotify -a iTerm -m "Completed with exit code $?" "$@";
 }
 
+
 # Count lines
 alias count="sort | uniq -c | sort -n"
+
 
 # Flush DNS cache (Mac OS X)
 alias flushdns="dscacheutil -flushcache"
 alias dnsflush="flushdns"
 
+
+# Clear (auto)corrections cache
+alias fix-autocorrect='hash -rf'
+
+
 # GitHub–Git integration
-[[ -x hub ]] && alias git=hub
+[[ -x `which hub` ]] && alias git=hub
+
 
 # Update git repo, and all submodules
 alias gitup="git submodule foreach 'git fetch origin --tags; git checkout master; git pull' && git pull && git submodule update --init --recursive"
 
+
 # Edit the hosts file
 alias hosts="edit /etc/hosts"
+
 
 # Get the IP address for a domain
 function ipfor(){
 	dig +short $1 | grep -E '^[0-9.]+$' | head -1
 }
 
+
 # Directory listing
 alias la="ls -lap"
 
+
 # Show trailing slash for directories
 alias ls='ls -p'
+
 
 # CD to projects
 function p {
 	cd ~/Projects/$1;
 }
 
+
 # Fix and shrink png files. Pass infile and outfile.
 alias pngfix="pngcrush -rem gAMA -rem cHRM -rem iCCP -rem sRGB $1 $2"
 
+
 # Quick look a file.
-alias ql='qlmanage -p "$@" >& /dev/null'
+alias quicklook='qlmanage -p "$@" >& /dev/null'
+alias al=quicklook
+
 
 # Reload Zsh config.
 alias reload='source ~/.zshrc'
 
+
 # `repeatchar x 10` => `xxxxxxxxxx`
 repeatchar(){ printf "%${2}s" "" | tr " " $1; }
 
-# Open an Xcode project in the current directory
-alias xcode="open *.xcodeproj"
 
 # Very lazy shortcuts.
 alias be='bundle exec'
@@ -57,9 +73,10 @@ alias gu=gitup
 alias r=rails
 alias vbm=VBoxManage
 
-# Clear (auto)corrections cache
-alias ccc='hash -rf'
 
-# Delete Xcode derived data
+# Fucking Xcode.
+# http://www.mikeash.com/pyblog/solving-simulator-bootstrap-errors.html
+alias xcode="open *.xcodeproj"
+alias xcode-unfuck-bootstrap="launchctl list|grep UIKitApplication|awk '{print $3}'|xargs launchctl remove"
 # http://inessential.com/2012/04/23/ded
-rm -rf ~/Library/Developer/Xcode/DerivedData
+alias xcode-unfuck-deriveddata="rm -rf ~/Library/Developer/Xcode/DerivedData"

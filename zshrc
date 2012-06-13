@@ -43,7 +43,7 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
 }
 
 # Load virtualenvwrapper
-[[ -x "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
+[[ -x "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
 
 # Turn on auto–detection of .rvmrc files
 [ -x __rvm_project_rvmrc ] && __rvm_project_rvmrc

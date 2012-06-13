@@ -13,6 +13,10 @@ function rvm_info () {
   [ "$full" != "[]" ] && echo $full
 }
 
+function virtualenv_info {
+    [ $VIRTUAL_ENV ] && echo '['`basename $VIRTUAL_ENV`']'
+}
+
 function hg_prompt_info {
     $OH_MY_ZSH_HG prompt --angle-brackets "\
 < on %{$fg[magenta]%}<branch>%{$reset_color%}>\
@@ -48,5 +52,5 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-RPROMPT='$(return_code) $(git_prompt_info) $(rvm_info) $(battery_charge)'
+RPROMPT='$(return_code) $(git_prompt_info) $(rvm_info) $(virtualenv_info) $(battery_charge)'
 

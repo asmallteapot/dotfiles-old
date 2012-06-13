@@ -43,6 +43,7 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
 }
 
 # Load virtualenvwrapper
+export VIRTUAL_ENV_DISABLE_PROMPT=true
 [[ -x "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
 
 # Turn on auto–detection of .rvmrc files

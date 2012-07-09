@@ -7,6 +7,8 @@ function alert() {
 # Count lines
 alias count="sort | uniq -c | sort -n"
 
+# One Command To Rule Them All
+alias edit=$EDITOR
 
 # Flush DNS cache (Mac OS X)
 alias flushdns="dscacheutil -flushcache"

@@ -12,13 +12,6 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails ruby osx)
 
-# Source other configuration files
-unsetopt auto_name_dirs
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
-source $ZSH/oh-my-zsh.sh
-source ~/.zsh-alias
-
 # enviroment variables
 export HUMAN="Bill Williams"
 export EDITOR="mate -w"
@@ -28,6 +21,13 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 export TERM="xterm-256color"
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export WORKON_HOME=~/.virtualenv
+
+# Source other configuration files
+unsetopt auto_name_dirs
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
+source $ZSH/oh-my-zsh.sh
+source ~/.zsh-alias
 
 # “Restore” support for Terminal.app under Lion
 # Set Apple Terminal.app resume directory

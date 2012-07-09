@@ -1,6 +1,6 @@
 [user]
-	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+	name = <%= ENV['HUMAN'] %>
+	email = <%= ENV['EMAIL'] %>
 [alias]
 	a   = add
 	ap  = add --patch
@@ -25,7 +25,7 @@
 	st  = status
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mvim -f
+	editor = <%= ENV['EDITOR'] %>
 	staged = diff --cached
 	autocrlf = input
 [apply]

@@ -19,6 +19,11 @@ alias dnsflush="flushdns"
 alias fix-autocorrect='hash -rf'
 
 
+# Fucking Postgres.
+alias gimmeafuckingpostgresqlprompt="psql -h localhost"
+alias pg=gimmeafuckingpostgresqlprompt
+
+
 # GitHub–Git integration
 [[ -x `which hub` ]] && alias git=hub
 

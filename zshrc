@@ -28,22 +28,10 @@ unsetopt auto_name_dirs
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh-alias
 
-# “Restore” support for Terminal.app under Lion
-# Set Apple Terminal.app resume directory
-if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
-  function chpwd {
-    local SEARCH=' '
-    local REPLACE='%20'
-    local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
-    printf '\e]7;%s\a' $PWD_URL
-  }
-
-  chpwd
-}
-
 # load rbenv
 if which rbenv > /dev/null; then; eval "$(rbenv init -)"; fi
 
 # load virtualenvwrapper
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 [[ -x "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
+

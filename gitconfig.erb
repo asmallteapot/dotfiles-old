@@ -2,6 +2,7 @@
 	name = <%= ENV['HUMAN'] %>
 	email = <%= ENV['EMAIL'] %>
 [alias]
+	checkout-submodules = submodule update --init --recursive
 	a   = add
 	ap  = add --patch
 	br  = branch
@@ -9,6 +10,7 @@
 	cia = commit --all
 	cim = commit --amend
 	co  = checkout
+	com = submodule update --init --recursive
 	df  = diff
 	dfc = diff --cached
 	fl  = flow
@@ -21,8 +23,6 @@
     rbs = rebase --skip
     sm = submodule
     sma = submodule add
-    smi = submodule init
-    smu = submodule update
 	st  = status
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore

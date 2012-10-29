@@ -14,7 +14,7 @@ plugins=(git rails ruby osx)
 
 # enviroment variables
 export HUMAN="Bill Williams"
-export EDITOR="mate -w"
+export EDITOR="vim -f"
 export EMAIL="bill@flpatriot.com"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/share/python:/usr/local/share/npm/bin:$HOME/.rbenv/bin:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages

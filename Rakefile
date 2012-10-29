@@ -31,13 +31,11 @@ task :install do
     end
   end
   
-  # this is a bad idea…
-  #puts "linking hosts file"
-  #File.symlink File.join(ENV['HOME'], '.hosts'), '/etc/hosts'
-  
   puts "linking zsh theme"
-  File.symlink File.join(ENV['HOME'], '.serenity.zsh-theme'), 
-    File.join(ENV['HOME'], '.oh-my-zsh', 'themes', 'serenity.zsh-theme')
+  theme_path = File.join(ENV['HOME'], '.serenity.zsh-theme')
+  unless File.exist? theme_path
+    File.symlink theme_path, File.join(ENV['HOME'], '.oh-my-zsh', 'themes', 'serenity.zsh-theme')
+  end
 end
 
 def replace_file(file)

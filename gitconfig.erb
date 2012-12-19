@@ -23,8 +23,8 @@
 	rbi = rebase --interactive
     rbc = rebase --continue
     rbs = rebase --skip
-    sm = submodule
-    sma = submodule add
+	search = log -S
+	show-deleted = log --diff-filter=D --summary
 	st  = status
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore

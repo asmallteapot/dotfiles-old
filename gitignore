@@ -17,3 +17,7 @@ ruby/command-t/mkmf.log
 
 # frakking Xcode
 *.xcuserdatad
+
+# frakking Python
+*.pyc
+

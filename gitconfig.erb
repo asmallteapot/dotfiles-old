@@ -15,6 +15,7 @@
 	com = submodule update --init --recursive
 	df  = diff
 	dfc = diff --cached
+	dft = difftool
 	fl  = flow
     history = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset' --all
     h = history
@@ -60,7 +61,6 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
-	external = Kaleidoscope
 
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"

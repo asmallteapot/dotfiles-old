@@ -27,6 +27,7 @@
 	search = log -S
 	show-deleted = log --diff-filter=D --summary
 	st  = status
+	undo = reset --soft HEAD^
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	editor = <%= ENV['EDITOR'] %>

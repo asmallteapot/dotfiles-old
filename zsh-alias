@@ -7,9 +7,6 @@ function alert() {
 # count lines
 alias count="sort | uniq -c | sort -n"
 
-# copy the short hash of the last git commit in the current repository
-alias copy-hash="git rev-parse --short HEAD | pbcopy"
-
 # One Command To Rule Them All
 alias edit=$EDITOR
 

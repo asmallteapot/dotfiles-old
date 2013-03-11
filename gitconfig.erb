@@ -5,6 +5,7 @@
 	helper = osxkeychain
 [alias]
 	checkout-submodules = submodule update --init --recursive
+	copy-hash = !git rev-parse --short HEAD | perl -i -p -e 's/\n//' | pbcopy
 	a   = add
 	ap  = add --patch
 	br  = branch

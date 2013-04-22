@@ -4,30 +4,60 @@
 [credential]
 	helper = osxkeychain
 [alias]
+	# assume a file is unmodified for now
+	assume		= update-index --assume-unchanged
+	unassume	= update-index --no-assume-unchanged
+	assumed		= "!git ls-files -v | grep ^h | cut -c 3-"
+
+	# recursively initialize and update all submodules
 	checkout-submodules = submodule update --init --recursive
+
+	# copy the short hash of the last commit
 	copy-hash = !git rev-parse --short HEAD | perl -i -p -e 's/\n//' | pbcopy
-	a   = add
-	ap  = add --patch
+
+	# choose which changes within a file to add
+	patch = add --patch
+
+	# show a colourful, branched verison of history
+	history = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset' --all
+
+	# show a list of all local files matched by your .gitignore
+	ignored = ls-files –others -i –exclude-standard
+
+	# lazy shortcuts
 	br  = branch
 	ci  = commit
 	cia = commit --all
 	cim = commit --amend
 	co  = checkout
-	com = submodule update --init --recursive
 	df  = diff
 	dfc = diff --cached
-	dft = difftool
-	fl  = flow
-	history = log --graph --pretty=format:'%C(yellow)%h%Creset%C(blue)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset' --all
 	h = history
 	push = push --set-upstream
-	rb  = rebase
-	rbi = rebase --interactive
-	rbc = rebase --continue
-	rbs = rebase --skip
+
+	# fetch remote changes, then replay any unpushed commits on top of them
+	purr = pull ––rebase
+
+	# perform an interface rebase of unpushed commits
+	# clean up commit messages, squash dumb extra commits, etc
+	ready = rebase -i @{u}
+
+	# look for diffs that add or remove a reference to the provided string
 	search = log -S
+
+	# show commits that deleted files
 	show-deleted = log --diff-filter=D --summary
-	st  = status
+
+	# backup working changes with a date-stamped stash
+	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+
+	# shorter status
+	st  = status -sb
+
+	# show all commits made in the past 24 hours
+	standup = !git log –since yesterday –author `git config user.email` –pretty=short
+
+	## move the last commit back to the index
 	undo = reset --soft HEAD^
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
@@ -61,9 +91,11 @@
 
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
-	[difftool]
+[difftool]
 	prompt = false
 [diff]
+	# make diffs easier to read
+	algorithm = patience
 	tool = Kaleidoscope
 
 [mergetool "Kaleidoscope"]

@@ -3,7 +3,7 @@ I copied a lot of this from [Ryan Bates’ dotfiles](https://github.com/ryanb/do
 
 
 ## License
-Copyright © 2011 Bill Williams
+Copyright © 2013 Bill Williams
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

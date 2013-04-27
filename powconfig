@@ -1,2 +1,2 @@
-export PATH="/Users/bill/.rbenv/shims:/Users/bill/.rbenv/bin:$PATH"
+export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH"
 

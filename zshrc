@@ -17,10 +17,13 @@ export HUMAN="Bill Williams"
 export EDITOR="vim -f"
 export EMAIL="bill@flpatriot.com"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/share/python:/usr/local/share/npm/bin:$HOME/.bin:$HOME/.rbenv/bin:$PATH"
+export PROJECTS="$HOME/Projects"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 export TERM="xterm-256color"
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export WORKON_HOME=~/.virtualenv
+
+export OFEXPORT_HOME="$PROJECTS/ofexport"
 
 # Source other configuration files
 unsetopt auto_name_dirs

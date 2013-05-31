@@ -21,3 +21,6 @@ ruby/command-t/mkmf.log
 # frakking Python
 *.pyc
 
+# frakking jetbrains
+.idea/
+

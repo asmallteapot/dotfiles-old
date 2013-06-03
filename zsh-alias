@@ -102,3 +102,7 @@ alias xcode-unfuck-bootstrap="launchctl list|grep UIKitApplication|awk '{print $
 # http://inessential.com/2012/04/23/ded
 alias xcode-unfuck-deriveddata="rm -rf ~/Library/Developer/Xcode/DerivedData"
 
+# fucking Finder.app
+# http://www.leancrew.com/all-this/2013/02/getting-rid-of-open-with-duplicates/
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+

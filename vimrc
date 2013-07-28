@@ -37,7 +37,7 @@ set hidden
 " syntax colouring
 syntax on
 set background=dark
-colorscheme tomorrow-night-eighties
+colorscheme tomorrow-night-bright
 
 " make comma the leader key
 let mapleader=","

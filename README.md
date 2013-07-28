@@ -1,6 +1,10 @@
+## rbenv installation
+```
+brew install rbenv ruby-install rbenv-bundler rbenv-gem-rehash rbenv-use
+```
+
 ## Credits
 I copied a lot of this from [Ryan Bates’ dotfiles](https://github.com/ryanb/dotfiles/). And a lot of other places that I can’t remember.
-
 
 ## License
 Copyright © 2013 Bill Williams

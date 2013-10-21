@@ -106,3 +106,6 @@ alias xcode-unfuck-deriveddata="rm -rf ~/Library/Developer/Xcode/DerivedData"
 # http://www.leancrew.com/all-this/2013/02/getting-rid-of-open-with-duplicates/
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
+# because I will literally never be able to remember this
+alias unixtime="date +%s"
+

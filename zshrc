@@ -10,7 +10,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby osx)
+plugins=(brew git osx virtualenv virtualenvwrapper)
 
 # enviroment variables
 export HUMAN="Bill Williams"
@@ -22,8 +22,6 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 export TERM="xterm-256color"
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export WORKON_HOME=~/.virtualenv
-
-export OFEXPORT_HOME="$PROJECTS/ofexport"
 
 # Source other configuration files
 unsetopt auto_name_dirs

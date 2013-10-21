@@ -19,6 +19,7 @@ export EMAIL="bill@flpatriot.com"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/share/python:/usr/local/share/npm/bin:$HOME/.bin:$HOME/.rbenv/bin:$PATH"
 export PROJECTS="$HOME/Projects"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+export RBENV_ROOT=/usr/local/var/rbenv
 export TERM="xterm-256color"
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export WORKON_HOME=~/.virtualenv
@@ -30,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh-alias
 
 # load rbenv
-if which rbenv > /dev/null; then; eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # load virtualenvwrapper
 export VIRTUAL_ENV_DISABLE_PROMPT=true

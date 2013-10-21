@@ -109,3 +109,6 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 # because I will literally never be able to remember this
 alias unixtime="date +%s"
 
+# install vim bundles for the first time
+alias vim-install-bundles='vim -u ~/.vim/vundle.vim +BundleInstall +q'
+

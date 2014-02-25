@@ -1,0 +1,3 @@
+# Loads Reveal framework with 'reveal' command.
+command script import ~/.lldb-scripts/reveal.py
+

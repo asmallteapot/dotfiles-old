@@ -1,6 +1,12 @@
 require 'rake'
 require 'erb'
 
+desc "initialize vundle"
+task :vundle do
+  puts "If this doesn't work, initialize the git submodules." 
+  `vim +BundleInstall +qall`
+end
+
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false

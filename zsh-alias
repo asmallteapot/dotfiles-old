@@ -112,3 +112,6 @@ alias unixtime="date +%s"
 # install vim bundles for the first time
 alias vim-install-bundles='vim -u ~/.vim/vundle.vim +BundleInstall +q'
 
+# use: "wifi on" or "wifi off"
+alias wifi='networksetup -setairportpower airport'
+

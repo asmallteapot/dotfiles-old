@@ -24,6 +24,9 @@ Bundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
 " syntax colouring for markdown
 Bundle 'tpope/vim-markdown'
 
+" vim/tmux integration
+Bundle 'christoomey/vim-tmux-navigator'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""

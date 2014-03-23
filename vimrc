@@ -90,12 +90,6 @@ nnoremap <C-f> :set hlsearch!<CR>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" navigate between panels
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 """"""""""""""""""""""""""""""""""""""""
 " PLUGIN CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""

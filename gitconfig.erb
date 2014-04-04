@@ -89,6 +89,8 @@
   changed = green
   untracked = cyan
 
+[diff "localizablestrings"]
+  textconv = "iconv -f utf-16 -t utf-8"
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
 [difftool]

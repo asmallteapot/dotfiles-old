@@ -27,6 +27,9 @@ Bundle 'tpope/vim-markdown'
 " vim/tmux integration
 Bundle 'christoomey/vim-tmux-navigator'
 
+" Golang
+Bundle 'https://github.com/fatih/vim-go'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""

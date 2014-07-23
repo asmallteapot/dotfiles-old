@@ -26,6 +26,9 @@ set ruler				" show the position of the cursor
 set wildmenu					" enable command completion
 set wildmode=list:longest,full	" show longest matching string first
 
+" ignore file patterns
+set wildignore+=*.pyc
+
 " set the terminal's title
 set title
 

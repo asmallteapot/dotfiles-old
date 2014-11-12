@@ -1,7 +1,6 @@
 .DS_Store
 .IndexedSearch
 .svn
-*.sw*
 *~
 
 # frakking Vim doctags

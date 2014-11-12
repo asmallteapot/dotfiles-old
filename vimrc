@@ -106,7 +106,13 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " search in the root directory of the current project
-let g:ctrlp_working_path_mode = 'rw'
+" 'r' == nearest ancestor path with version control
+" 'a' == directory of current file, unless shell CWD isn't direct ancestor
+let g:ctrlp_working_path_mode = 'ra'
 
 " open files created with ctrl-y in the current panel
 let g:ctrlp_open_new_file = 'r'
+
+" load extensions
+let g:ctrlp_extensions = ['funky']
+

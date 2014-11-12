@@ -18,6 +18,9 @@ Bundle 'mileszs/ack.vim'
 " fuzzy file finder
 Bundle 'kien/ctrlp.vim'
 
+" navigation function definitions with ctrpl
+Bundle 'tacahiroy/ctrlp-funky'
+
 " colour schemes
 Bundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
 

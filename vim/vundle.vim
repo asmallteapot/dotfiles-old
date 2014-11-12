@@ -33,6 +33,9 @@ Bundle 'christoomey/vim-tmux-navigator'
 " Golang
 Bundle 'https://github.com/fatih/vim-go'
 
+" Swift
+Bundle 'Keithbsmiley/swift.vim'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""

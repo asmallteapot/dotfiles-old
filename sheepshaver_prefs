@@ -1,0 +1,33 @@
+disk /Users/teapot/Relix/zannah.vol
+cdrom /dev/poll/cdrom
+extfs /Users/teapot/Relix/SharedData
+screen win/800/600
+windowmodes 0
+screenmodes 0
+seriala /dev/cu.Bluetooth-Modem
+serialb /dev/null
+rom /Users/teapot/Relix/ROMs/ROM Update 1.0
+bootdrive 0
+bootdriver 0
+ramsize 268435456
+frameskip 0
+gfxaccel true
+nocdrom false
+nonet false
+nosound false
+nogui true
+noclipconversion false
+ignoresegv true
+ignoreillegal false
+jit true
+jit68k false
+keyboardtype 5
+ether slirp
+keycodes true
+keycodefile 
+mousewheelmode 0
+mousewheellines 1
+dsp /dev/dsp
+mixer /dev/mixer
+ignoresegv true
+idlewait true

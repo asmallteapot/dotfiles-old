@@ -36,6 +36,9 @@ Bundle 'https://github.com/fatih/vim-go'
 " Swift
 Bundle 'Keithbsmiley/swift.vim'
 
+" gitgutter - shows git diff status in the gutter
+Bundle 'airblade/vim-gitgutter'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""

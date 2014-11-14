@@ -39,6 +39,9 @@ Bundle 'Keithbsmiley/swift.vim'
 " gitgutter - shows git diff status in the gutter
 Bundle 'airblade/vim-gitgutter'
 
+" search for documentation in Dash.app (Mac only)
+Bundle 'rizzatti/dash.vim'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""

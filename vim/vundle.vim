@@ -42,6 +42,9 @@ Bundle 'airblade/vim-gitgutter'
 " search for documentation in Dash.app (Mac only)
 Bundle 'rizzatti/dash.vim'
 
+" autocomplete based on libclang
+Bundle 'https://github.com/Valloric/YouCompleteMe'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""

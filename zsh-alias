@@ -46,6 +46,11 @@ function p {
     fi
 }
 
+# open files in vim
+function vimf () {
+    vim -o $(find * -type f | selecta)
+}
+
 # fix and shrink png files. pass infile and outfile.
 alias pngfix="pngcrush -rem gAMA -rem cHRM -rem iCCP -rem sRGB $1 $2"
 

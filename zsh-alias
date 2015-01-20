@@ -39,7 +39,11 @@ alias ls='ls -1p'
 
 # CD to projects
 function p {
-	cd ~/Projects/$1;
+    if [[ -x `which selecta` ]]; then
+        cd $(find ~/Projects -maxdepth 1 -type d | selecta)
+    else
+        cd ~/Projects/$1;
+    fi
 }
 
 # fix and shrink png files. pass infile and outfile.

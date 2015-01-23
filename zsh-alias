@@ -39,11 +39,15 @@ alias ls='ls -1p'
 
 # CD to projects
 function p {
+    if [[ -d $2 ]]; then
+        cd ~/Projects/$1;
+        return;
+    fi
     if [[ -x `which selecta` ]]; then
         cd $(find ~/Projects -maxdepth 1 -type d | selecta)
-    else
-        cd ~/Projects/$1;
+        return;
     fi
+    cd ~/Projects;
 }
 
 # open files in vim

@@ -39,7 +39,7 @@ alias ls='ls -1p'
 
 # CD to projects
 function p {
-    if [[ -d $2 ]]; then
+    if [[ -n "$1" ]] && [[ -d ~/Projects/$1 ]]; then
         cd ~/Projects/$1;
         return;
     fi

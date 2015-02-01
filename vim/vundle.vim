@@ -45,9 +45,13 @@ Bundle 'rizzatti/dash.vim'
 " autocomplete based on libclang
 Bundle 'https://github.com/Valloric/YouCompleteMe'
 
+" because other people have incorrect opinions about indentation
+Bundle 'https://github.com/editorconfig/editorconfig-vim'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""
 
 " turn on filetype support
 filetype plugin indent on
+

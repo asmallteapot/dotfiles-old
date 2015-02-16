@@ -38,3 +38,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 [[ -x "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
 
+# load zsh-syntax-highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# Set backup prompt in case zsh theme fails to load.
+PROMPT=[%n@$(hostname -s):${PWD/#$HOME/~}]\$ 
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME='serenity'

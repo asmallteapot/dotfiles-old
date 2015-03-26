@@ -33,8 +33,14 @@ Bundle 'christoomey/vim-tmux-navigator'
 " Golang
 Bundle 'https://github.com/fatih/vim-go'
 
+" Rust
+Bundle 'https://github.com/rust-lang/rust.vim'
+
 " Swift
 Bundle 'Keithbsmiley/swift.vim'
+
+" Toml
+Bundle 'https://github.com/cespare/vim-toml'
 
 " gitgutter - shows git diff status in the gutter
 Bundle 'airblade/vim-gitgutter'

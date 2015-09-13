@@ -4,6 +4,10 @@ ZSH=$HOME/.oh-my-zsh
 # Set backup prompt in case zsh theme fails to load.
 PROMPT=[%n@$(hostname -s):${PWD/#$HOME/~}]\$ 
 
+# Configure option-arrow keys in iTerm 2
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME='serenity'

@@ -35,7 +35,7 @@ export WORKON_HOME=~/.virtualenv
 # Source other configuration files
 unsetopt auto_name_dirs
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
-source $ZSH/oh-my-zsh.sh
+[[ -s $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 source ~/.zsh-alias
 
 # load rbenv

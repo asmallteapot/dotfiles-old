@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set backup prompt in case zsh theme fails to load.
-PROMPT=[%n@$(hostname -s):${PWD/#$HOME/~}]\$ 
+PROMPT=[%n@$(hostname -s):%~]$\ 
 
 # Configure option-arrow keys in iTerm 2
 bindkey '[C' forward-word

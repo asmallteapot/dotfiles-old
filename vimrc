@@ -9,6 +9,10 @@ endif
 " needed to make vim load zshrc
 set shell=zsh
 
+" always use utf-8 for everything
+set encoding=utf-8      " encoding used to represent/display characters
+set fileencoding=utf-8  " encoding used when reading/writing files
+
 " why are these not the defaults
 set number				" line numbers
 set cursorline			" highlight the current line

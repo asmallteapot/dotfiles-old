@@ -32,11 +32,16 @@ export TERM="xterm-256color"
 export VIRTUALENV_USE_DISTRIBUTE="True"
 export WORKON_HOME=~/.virtualenv
 
+function source_if_exists {
+    [[ -s $1 ]] && source $1
+}
+
 # Source other configuration files
 unsetopt auto_name_dirs
-[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
-[[ -s $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
-source ~/.zsh-alias
+source_if_exists "/usr/local/bin/virtualenvwrapper.sh"
+source_if_exists $ZSH/oh-my-zsh.sh
+source_if_exists ~/.zsh-alias
+source_if_exists ~/.zsh/$(hostname -s).sh
 
 # load rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

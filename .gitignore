@@ -1,2 +1,6 @@
 vim/bundle/*
 !vim/bundle/vundle
+
+# ignore machine-specific zsh configurations
+zsh/local/*
+

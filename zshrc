@@ -41,7 +41,7 @@ unsetopt auto_name_dirs
 source_if_exists "/usr/local/bin/virtualenvwrapper.sh"
 source_if_exists $ZSH/oh-my-zsh.sh
 source_if_exists ~/.zsh-alias
-source_if_exists ~/.zsh/$(hostname -s).sh
+source_if_exists ~/.zsh/local/$(hostname -s).sh
 
 # load rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

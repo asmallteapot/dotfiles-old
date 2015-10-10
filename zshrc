@@ -20,9 +20,9 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(brew git osx virtualenv virtualenvwrapper)
 
 # enviroment variables
-export HUMAN="Bill Williams"
+export HUMAN="Teapot"
 export EDITOR="vim -f"
-export EMAIL="bill@flpatriot.com"
+export EMAIL="hi@asmallteapot.com"
 export GOPATH="/usr/local/Cellar/go/1.3"
 export PATH="/usr/local/bin:/usr/local/sbin:$GOPATH:/usr/local/heroku/bin:/usr/local/share/npm/bin:$HOME/.bin:$HOME/.rbenv/bin:$PATH"
 export PROJECTS="$HOME/Projects"

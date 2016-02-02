@@ -7,7 +7,7 @@ brew install rbenv ruby-install rbenv-bundler rbenv-gem-rehash rbenv-use
 I copied a lot of this from [Ryan Bates’ dotfiles](https://github.com/ryanb/dotfiles/). And a lot of other places that I can’t remember.
 
 ## License
-Copyright © 2013 Bill Williams
+Copyright © 2016 Ellen Teapot
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

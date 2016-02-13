@@ -120,3 +120,8 @@ let g:ctrlp_open_new_file = 'r'
 " load extensions
 let g:ctrlp_extensions = ['funky']
 
+" powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+

@@ -42,7 +42,16 @@ export VIRTUALENV_USE_DISTRIBUTE="True"
 export WORKON_HOME=~/.virtualenv
 
 function source_if_exists {
-    [[ -s $1 ]] && source $1
+    LOG_DEBUG "source_if_exists - invoked with $1"
+    for file in $1; {
+        LOG_DEBUG "source_if_exists - checking $file"
+        if [[ -s $file ]]; then;
+            LOG_DEBUG "source_if_exists - sourcing $file"
+            source $file;
+        else
+            LOG_DEBUG "source_if_exists - can't source $file" > /dev/stderr
+        fi
+    }
 }
 
 # Source other configuration files

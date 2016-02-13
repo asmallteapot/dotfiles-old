@@ -4,3 +4,6 @@ vim/bundle/*
 # ignore machine-specific zsh configurations
 zsh/local/*
 
+# ignore vim file history
+vim/.netrwhist
+

@@ -20,7 +20,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(brew git osx virtualenv virtualenvwrapper)
 
 # enviroment variables
-export HUMAN="Teapot"
+export HUMAN="Ellen Teapot"
 export EDITOR="vim -f"
 export EMAIL="hi@asmallteapot.com"
 export GOPATH="/usr/local/Cellar/go/1.3"

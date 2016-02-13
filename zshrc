@@ -4,6 +4,15 @@ ZSH=$HOME/.oh-my-zsh
 # Set backup prompt in case zsh theme fails to load.
 PROMPT=[%n@$(hostname -s):%~]$\ 
 
+# Log extra info when working on config files.
+export DOTFILES_DEBUG=false
+
+function LOG_DEBUG {
+    if $DOTFILES_DEBUG; then;
+        echo $1 > /dev/stderr
+    fi;
+}
+
 # Configure option-arrow keys in iTerm 2
 bindkey '[C' forward-word
 bindkey '[D' backward-word

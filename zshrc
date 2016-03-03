@@ -116,3 +116,8 @@ source_if_exists ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # load powerline
 source_if_exists $PYTHONPATH/powerline/bindings/zsh/powerline.zsh
 
+# load rbenv shims
+if [[ -x rbenv; ]]; then;
+    rbenv init -
+fi;
+

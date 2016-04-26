@@ -92,7 +92,14 @@
 
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" "$REMOTE"
+#driver for merging Xcode project files
+[mergetool "mergepbx"]
+	cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 [mergetool]
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+[merge "mergepbx"]
+	name = Xcode project files merger
+	driver = mergepbx %O %A %B
+

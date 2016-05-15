@@ -90,10 +90,8 @@ if [[ -x brew ]]; then;
     PYTHON_VERSION=`python -c "import sys; print str(sys.version_info.major) + '.' + str(sys.version_info.minor)"`
     export PYTHONPATH="$BREW_PREFIX/lib/python$PYTHON_VERSION/site-packages"
 else;
-    # if we don't have homebrew, use the hardcoded value that was here before.
-    # if you're running into weird problems because of this, then it's probably
-    # time to completely overhaul your python configuration.
-    export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
+    # if we don't have homebrew, try asking the default python for its site-packages directory
+    export PYTHONPATH=`python -c "import site; print site.getsitepackages()[0]"`
 fi;
 
 # load virtualenvwrapper

@@ -78,25 +78,25 @@
   changed = green
   untracked = cyan
 
-[diff "localizablestrings"]
-  textconv = "iconv -f utf-16 -t utf-8"
-  binary = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
+
 [difftool]
 	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
+
 [diff]
 	# make diffs easier to read
 	algorithm = patience
 	tool = Kaleidoscope
+[diff "localizablestrings"]
+  textconv = "iconv -f utf-16 -t utf-8"
+  binary = false
 
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" "$REMOTE"
-#driver for merging Xcode project files
-[mergetool "mergepbx"]
-	cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 [mergetool]
 	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" "$REMOTE"
+
 [merge]
 	tool = Kaleidoscope
 [merge "mergepbx"]

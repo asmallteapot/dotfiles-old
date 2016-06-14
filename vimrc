@@ -122,8 +122,13 @@ let g:ctrlp_extensions = ['funky']
 
 " powerline
 if has('python')
-    python from powerline.vim import setup as powerline_setup
-    python powerline_setup()
-    python del powerline_setup
+    python << endpython
+try:
+    from powerline.vim import setup as powerline_setup
+    powerline_setup()
+    del powerline_setup
+except ImportError:
+    print("To enable Powerline, run:\npip install powerline-status")
+endpython
 endif
 

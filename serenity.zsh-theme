@@ -32,3 +32,7 @@ PROMPT='[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}$(box_name)%{$reset_c
 
 RPROMPT='$(return_code) $(battery_charge)'
 
+precmd() {
+    echo -ne "\033]0;$PWD\007"
+}
+

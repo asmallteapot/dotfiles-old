@@ -4,6 +4,11 @@ ZSH=$HOME/.oh-my-zsh
 # Set backup prompt in case zsh theme fails to load.
 PROMPT=[%n@$(hostname -s):%~]$\ 
 
+# set window title to current working directory
+precmd() {
+    echo -ne "\033]0;$PWD\007"
+}
+
 
 ################################################################
 # debugging

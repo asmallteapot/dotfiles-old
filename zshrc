@@ -124,3 +124,10 @@ if [[ -x rbenv; ]]; then;
     rbenv init -
 fi;
 
+# load swiftenv
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
+# load xcenv
+if which xcenv > /dev/null; then eval "$(xcenv init -)"; fi
+export XCENV_DO_NOT_SHIM_LIST="git"
+

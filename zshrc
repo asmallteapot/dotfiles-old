@@ -56,10 +56,20 @@ plugins=(brew git osx virtualenv virtualenvwrapper)
 export HUMAN="Ellen Teapot"
 export EDITOR="vim -f"
 export EMAIL="hi@asmallteapot.com"
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.bin:$PATH"
 export PROJECTS="$HOME/Projects"
 export TERM="xterm-256color"
 
+# manage path as a zsh array
+# http://superuser.com/a/598924
+# setting the type of $path to -U deduplicates entries
+typeset -U path
+path=(
+    /usr/local/bin
+    /usr/local/sbin
+    $HOME/.bin
+    $HOME/.cargo/bin
+    $path
+)
 
 ################################################################
 # load other configuration files

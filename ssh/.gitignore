@@ -1,0 +1,6 @@
+# please don't sync ssh keys with git
+id_*
+
+# this also seems like a bad idea
+known_hosts
+

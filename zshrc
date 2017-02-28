@@ -4,6 +4,11 @@ ZSH=$HOME/.oh-my-zsh
 # Set backup prompt in case zsh theme fails to load.
 PROMPT=[%n@$(hostname -s):%~]$\ 
 
+# set window title to current working directory
+precmd() {
+    echo -ne "\033]0;$PWD\007"
+}
+
 
 ################################################################
 # debugging
@@ -51,10 +56,20 @@ plugins=(brew git osx virtualenv virtualenvwrapper)
 export HUMAN="Ellen Teapot"
 export EDITOR="vim -f"
 export EMAIL="hi@asmallteapot.com"
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.bin:$PATH"
 export PROJECTS="$HOME/Projects"
 export TERM="xterm-256color"
 
+# manage path as a zsh array
+# http://superuser.com/a/598924
+# setting the type of $path to -U deduplicates entries
+typeset -U path
+path=(
+    /usr/local/bin
+    /usr/local/sbin
+    $HOME/.bin
+    $HOME/.cargo/bin
+    $path
+)
 
 ################################################################
 # load other configuration files
@@ -118,4 +133,11 @@ source_if_exists $PYTHONPATH/powerline/bindings/zsh/powerline.zsh
 if [[ -x rbenv; ]]; then;
     rbenv init -
 fi;
+
+# load swiftenv
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
+# load xcenv
+if which xcenv > /dev/null; then eval "$(xcenv init -)"; fi
+export XCENV_DO_NOT_SHIM_LIST="git"
 

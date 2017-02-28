@@ -54,6 +54,9 @@ Bundle 'https://github.com/Valloric/YouCompleteMe'
 " because other people have incorrect opinions about indentation
 Bundle 'https://github.com/editorconfig/editorconfig-vim'
 
+" syntax checker
+Bundle 'https://github.com/scrooloose/syntastic'
+
 """"""""""""""""""""""""""""""""""""""""
 " END USER PLUGINS
 """"""""""""""""""""""""""""""""""""""""

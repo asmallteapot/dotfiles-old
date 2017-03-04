@@ -121,7 +121,7 @@ source_if_exists "/usr/local/share/python/virtualenvwrapper.sh"
 ################################################################
 
 # load git autocomplete
-source_if_exists "/usr/local/share/zsh/site-functions/git-completion.bash"
+source_if_exists "/usr/local/share/zsh/site-functions"
 
 # load zsh-syntax-highlighting
 source_if_exists ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

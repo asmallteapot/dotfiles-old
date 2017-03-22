@@ -1,8 +1,86 @@
-[user]
-	name = <%= ENV['HUMAN'] %>
-	email = <%= ENV['EMAIL'] %>
+[apply]
+  whitespace = fix
+
+[commit]
+  gpgsign = true
+
+[core]
+	excludesfile = <%= ENV['HOME'] %>/.gitignore
+	editor = <%= ENV['EDITOR'] %>
+	staged = diff --cached
+	autocrlf = input
+	pager = less -r
+
 [credential]
 	helper = osxkeychain
+
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+
+[pgp] 
+  program = gpg
+
+[push]
+  default = simple
+
+[user]
+  name = <%= ENV['GIT_NAME'] %>
+  email = <%= ENV['GIT_EMAIL'] %>
+  signingkey = <%= ENV['GIT_PGPKEY'] %>
+
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+
+[difftool]
+  prompt = false
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
+
+[diff]
+  # make diffs easier to read
+  algorithm = patience
+  tool = Kaleidoscope
+
+[diff "localizablestrings"]
+  textconv = "iconv -f utf-16 -t utf-8"
+  binary = false
+
+
+[mergetool]
+  prompt = false
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" "$REMOTE"
+
+[merge]
+	tool = Kaleidoscope
+
+[merge "mergepbx"]
+	name = Xcode project files merger
+	driver = mergepbx %O %A %B
+
+
 [alias]
 	# assume a file is unmodified for now
 	assume		= update-index --assume-unchanged
@@ -48,58 +126,4 @@
 
 	## move the last commit back to the index
 	undo = reset --soft HEAD^
-[core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = <%= ENV['EDITOR'] %>
-	staged = diff --cached
-	autocrlf = input
-	pager = less -r
-[apply]
-	whitespace = fix
-[push]
-	default = simple
-[format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
-[color]
-  branch = auto
-  diff = auto
-  status = auto
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
-
-
-[difftool]
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"
-
-[diff]
-	# make diffs easier to read
-	algorithm = patience
-	tool = Kaleidoscope
-[diff "localizablestrings"]
-  textconv = "iconv -f utf-16 -t utf-8"
-  binary = false
-
-[mergetool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" "$REMOTE"
-
-[merge]
-	tool = Kaleidoscope
-[merge "mergepbx"]
-	name = Xcode project files merger
-	driver = mergepbx %O %A %B
 

@@ -7,3 +7,8 @@ zsh/local/*
 # ignore vim file history
 vim/.netrwhist
 
+# ignore gpg stuff
+gnupg/.gpg-agent-info
+gnupg/random_seed
+gnupg/*.gpg
+

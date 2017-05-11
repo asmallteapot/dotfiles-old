@@ -12,3 +12,5 @@ gnupg/.gpg-agent-info
 gnupg/random_seed
 gnupg/*.gpg
 
+# ignore random configs
+config/configstore

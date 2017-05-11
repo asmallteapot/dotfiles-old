@@ -1,66 +1,88 @@
-" turn off filetype support
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" begin vundle setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" required: be iMproved
+set nocompatible
+
+" required: temporarily disable filetype supprt
 filetype off
 
-" initialize vundle
+" required: set the runtime path to include vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" let vundle manage vundle
-Bundle 'gmarik/vundle'
+" required: initialize vundle
+" optional: install plugins to custom location by sending a path to #begin()
+call vundle#begin()
 
-""""""""""""""""""""""""""""""""""""""""
-" BEGIN USER PLUGINS
-""""""""""""""""""""""""""""""""""""""""
+" required: let vundle manage vundle
+Plugin 'gmarik/vundle'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" language support
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" golang 
+Plugin 'https://github.com/fatih/vim-go'
+
+" jinja2
+Plugin 'Glench/Vim-Jinja2-Syntax'
+
+" markdown
+Plugin 'tpope/vim-markdown'
+
+" rust
+Plugin 'https://github.com/rust-lang/rust.vim'
+
+" swift
+Plugin 'Keithbsmiley/swift.vim'
+
+" toml
+Plugin 'https://github.com/cespare/vim-toml'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " search in files
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 
 " fuzzy file finder
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
-" navigation function definitions with ctrpl
-Bundle 'tacahiroy/ctrlp-funky'
+" navigation function definitions with ctrlp
+Plugin 'tacahiroy/ctrlp-funky'
 
 " colour schemes
-Bundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
-
-" syntax colouring for markdown
-Bundle 'tpope/vim-markdown'
+Plugin 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
 
 " vim/tmux integration
-Bundle 'christoomey/vim-tmux-navigator'
-
-" Golang
-Bundle 'https://github.com/fatih/vim-go'
-
-" Rust
-Bundle 'https://github.com/rust-lang/rust.vim'
-
-" Swift
-Bundle 'Keithbsmiley/swift.vim'
-
-" Toml
-Bundle 'https://github.com/cespare/vim-toml'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " gitgutter - shows git diff status in the gutter
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 
 " search for documentation in Dash.app (Mac only)
-Bundle 'rizzatti/dash.vim'
+Plugin 'rizzatti/dash.vim'
 
 " autocomplete based on libclang
-Bundle 'https://github.com/Valloric/YouCompleteMe'
+Plugin 'https://github.com/Valloric/YouCompleteMe'
 
 " because other people have incorrect opinions about indentation
-Bundle 'https://github.com/editorconfig/editorconfig-vim'
+Plugin 'https://github.com/editorconfig/editorconfig-vim'
 
 " syntax checker
-Bundle 'https://github.com/scrooloose/syntastic'
+Plugin 'https://github.com/scrooloose/syntastic'
 
-""""""""""""""""""""""""""""""""""""""""
-" END USER PLUGINS
-""""""""""""""""""""""""""""""""""""""""
 
-" turn on filetype support
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" finalize vundle setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" required: end the setup process
+call vundle#end()
+
+" required: enable filetype and indent support
 filetype plugin indent on
 
